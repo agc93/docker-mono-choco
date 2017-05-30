@@ -1,4 +1,6 @@
 FROM mono:3.12
+LABEL maintainer="Alistair Chapman <alistair@agchapman.com>" \
+	description="A simple Docker image using Mono 3.12 to run Chocolatey"
 
 RUN apt-get update && apt-get install -y wget unzip git mono-devel
 
