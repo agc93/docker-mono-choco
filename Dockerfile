@@ -3,6 +3,7 @@ LABEL maintainer="Alistair Chapman <alistair@agchapman.com>" \
 	description="A simple Docker image using Mono 3.12 to run Chocolatey"
 
 RUN apt-get update && apt-get install -y wget unzip git mono-devel
+RUN mozroots --import --sync
 
 WORKDIR /usr/local/src
 RUN git clone --depth=10 --branch=master https://github.com/chocolatey/choco.git
